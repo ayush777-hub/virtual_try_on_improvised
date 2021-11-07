@@ -61,12 +61,14 @@ for cloth in cloth_list_raw:
 
 CART=[]
 
-
+@app.route('/')
+def hello_world():
+    return render_template('home.html')
 @app.route('/shirt')
 def hello_world():
     return render_template('login.html', img_list=cloth_list)
 
-@app.route('/accesories')
+@app.route('/accessories')
 def index():
     return render_template('index.html')
 
@@ -143,13 +145,13 @@ def run_model_web(f, cloth_name, cloth_f=None):
     '''
     if cloth_f is None:
         print(f, cloth_name)
-        c_img = mpimg.imread('/content/Virtual-Try-On-Flask/static/img/'+cloth_name)
+        c_img = mpimg.imread('/content/virtual_try_on_improvised/static/img/'+cloth_name)
     else:
         print(f, cloth_f)
         try:
             c_img = mpimg.imread(cloth_f)
         except:
-            c_img = mpimg.imread('/content/Virtual-Try-On-Flask/static/img/'+cloth_name)
+            c_img = mpimg.imread('/content/virtual_try_on_improvised/static/img/'+cloth_name)
 
     # local resource temp file would be used as static resource.
     print(c_img.shape)
@@ -174,8 +176,8 @@ def run_model_web(f, cloth_name, cloth_f=None):
     print("v:"+str(v))
     out = np.array(out,dtype=np.float32)
 
-    path1 = '/content/Virtual-Try-On-Flask/'+temp_o_name
-    path2 = '/content/Virtual-Try-On-Flask/'+temp_h_name
+    path1 = '/content/virtual_try_on_improvised/'+temp_o_name
+    path2 = '/content/virtual_try_on_improvised/'+temp_h_name
     if 'jpg' not in temp_o_name and 'jpeg' not in temp_o_name:
         path1 = path1 + '.jpeg'
         temp_o_name += '.jpeg'
