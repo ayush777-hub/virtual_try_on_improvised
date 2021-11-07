@@ -3,7 +3,7 @@ This file implements the web server on flask.
 It can provide web service, response all predict requests.
 '''
 import os
-from flask import Flask, render_template, request, url_for, send_from_directory
+from flask import Flask, render_template, request, url_for, send_from_directory, redirect
 from PIL import Image
 import numpy as np
 import time
@@ -99,10 +99,11 @@ def video_feed():
 
 @app.route('/tryon/<file_path>',methods = ['POST', 'GET'])
 def tryon(file_path):
-	file_path = file_path.replace(',','/')
-	os.system('python tryOn.py ' + file_path)
-	return render_template('checkout.html')
-    #return redirect('http://127.0.0.1:5000/',code=302, Response=None)
+  file_path = file_path.replace(',','/')
+  print(os.getcwd())
+
+  os.system('python /content/virtual_try_on_improvised/tryOn.py /content/virtual_try_on_improvised/' + file_path)
+  return render_template('index.html')
 
 @app.route('/tryall',methods = ['POST', 'GET'])
 def tryall():
