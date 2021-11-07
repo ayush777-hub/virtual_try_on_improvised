@@ -65,11 +65,11 @@ CART=[]
 def hello_world():
     return render_template('home.html')
 @app.route('/shirt')
-def hello_world():
+def shirt_index():
     return render_template('login.html', img_list=cloth_list)
 
 @app.route('/accessories')
-def index():
+def accessories_index():
     return render_template('index.html')
 
 @app.route('/checkOut')
