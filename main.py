@@ -221,7 +221,6 @@ server:
 @app.route('/cloth', methods=['GET', 'POST'])
 def Hello_cloth():
     '''
-    响应客户端请求
     reponse requests from clients
     '''
     output_str = ""

@@ -14,7 +14,7 @@ Feature:
 
 1. Download 3 [pretrained models](#checkpoints) to `/checkpoints`.
 2. install [dependency packages](#Dependency)
-3. Start Flask service `python main.py`
+4. Start Flask service `python main.py`
 
 
 ~~*For now, GPU environment is essential. If you want to run it on CPU environment, delete all `.cuda()` calls in CPVTON.py and Networks.py.*~~   
@@ -51,15 +51,6 @@ checkpoints/\* | checkpoints dir
 download link on [*Google Drive*](https://drive.google.com/file/d/125UtOS4T4RBji8lXtm9WEwD1KcHG4F1g/view?usp=sharing) and [*Baidu Pan*](https://pan.baidu.com/s/1e8tKEz7hpHAxqV6B5_hOIw)
 
 
-# TODO List
-
-- [x] Optimize model  
-- [x] Web try-on service  
-- [x] Basic documentation and comments  
-- [x] Client post documentation  
-- [x] Faster models download support  
-- [x] CPU support
-
 # References
 
 Model designs are based on JPP-Net & CPVTON, and their open-source repo on Github.  
@@ -71,5 +62,3 @@ Model designs are based on JPP-Net & CPVTON, and their open-source repo on Githu
 [(**JPP-Net**) Look into Person: Joint Body Parsing & Pose Estimation Network and A New Benchmark](https://arxiv.org/abs/1804.01984), Xiaodan Liang, Ke Gong, Xiaohui Shen, Liang Lin, **T-PAMI 2018**.
 
 ----
-
-*Powered By **Imba**, [JD Digits](https://www.jddglobal.com/)*
