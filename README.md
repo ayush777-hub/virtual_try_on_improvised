@@ -17,7 +17,7 @@ Feature:
 4. Start Flask service `python main.py`
 
 
-~~*For now, GPU environment is essential. If you want to run it on CPU environment, delete all `.cuda()` calls in CPVTON.py and Networks.py.*~~   
+  
 CPU Mode: `Model(.., use_cuda = False)`
 
 # Network Architecture
@@ -47,7 +47,6 @@ checkpoints/\* | checkpoints dir
 
 # Checkpoints
 
-~~*coming soon..*~~  
 download link on [*Google Drive*](https://drive.google.com/file/d/125UtOS4T4RBji8lXtm9WEwD1KcHG4F1g/view?usp=sharing) and [*Baidu Pan*](https://pan.baidu.com/s/1e8tKEz7hpHAxqV6B5_hOIw)
 
 
