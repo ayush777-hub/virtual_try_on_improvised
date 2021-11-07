@@ -30,21 +30,6 @@ This multi-stage network consists of 3 parts:
 
 ![20200117182844.png](https://raw.githubusercontent.com/GrayXu/Online-Storage/master/img/20200117182844.png)
 
-# File
-
-Fname | Usage  
--|-  
-main.py | Flask service  
-get.py | clients post predict requests to Flask server  
-Model.py | Virtual Try-on Net
-CPVTON.py | CPVTON model (GMM+TOM)
-networks.py | CPVTON's basic network unit
-JPPNet.py | JPP-Net model's init & predict
-static/* | static resource
-data/\*, example/\* | example test images
-template/\* | Flask's html file based on Jinjia
-checkpoints/\* | checkpoints dir
-
 # Checkpoints
 
 download link on [*Google Drive*](https://drive.google.com/file/d/125UtOS4T4RBji8lXtm9WEwD1KcHG4F1g/view?usp=sharing) and [*Baidu Pan*](https://pan.baidu.com/s/1e8tKEz7hpHAxqV6B5_hOIw)
